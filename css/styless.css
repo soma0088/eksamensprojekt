@@ -1,0 +1,851 @@
+/* -- mobile first responsive nav bar kopierede fra chat GPT(link):https://claude.ai/chat/00d2bffa-c77f-4b87-a438-bcef5472672c  */
+:root {
+  --blue: #0033a0;
+  --dark-red: #ad0000;
+  --black: #000000;
+  --light-red: #bb0000;
+  --gray: #666666;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* line-height: 1.6; */
+  background-color: #007bff;
+
+}
+
+/* Navbar styles */
+.navbar {
+  position: sticky;
+  background-color: #0056b3;
+  opacity: 0.2;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  opacity: 0.9;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* max-width: 1200px; */
+  /* margin: 0 auto; */
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #cfd0e9;
+  width: 20%;
+  height: 20%;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+}
+
+.nav-menu li {
+  margin-left: 1rem;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #0a0404;
+  transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: var(--blue);
+
+}
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.col-1 {
+  width: 8.33%;
+}
+
+.col-2 {
+  width: 16.66%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33%;
+}
+
+.col-5 {
+  width: 41.66%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  /* margin: 3px 0; */
+  transition: 0.4s;
+}
+
+
+
+/* Content padding to prevent navbar overlap */
+.content {
+  padding-top: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* End of nab bar  */
+
+
+
+/* beginning of the slide show - link to the code:https://www.perplexity.ai/search/may-you-code-a-mobilefirst-res-djEMMPtIQVOGZiD3UW_voQ*/
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 10%;
+  /* margin-bottom: 20px; */
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  transition: opacity 0.5s;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  display: block;
+  opacity: 1;
+}
+
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(232, 222, 222);
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: rgba(49, 42, 140, 0.8);
+  cursor: pointer;
+  height: 8%;
+}
+
+.next {
+  right: 1%;
+  border-radius: 20px;
+}
+
+.prev {
+  margin-left: 3%;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 1);
+}
+
+@media only screen and (min-width: 768px) {
+
+  .prev,
+  .next {
+    font-size: 24px;
+    padding: 20px;
+  }
+}
+
+/* End of the slide show link to the code: https://www.perplexity.ai/search/may-you-code-a-mobilefirst-res-djEMMPtIQVOGZiD3UW_voQ */
+
+/* begin of styling the arrangements  */
+
+.container-arrangements {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.column {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  flex: 1 1 100%;
+  /* Default: Full-width columns */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column img {
+  max-width: 100%;
+  /* Ensure images are responsive */
+  border-radius: 5px;
+
+}
+
+.column h2 {
+  font-size: 1.4rem;
+  color: #444;
+
+}
+
+.column p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+
+/* End of styling the arrangements  */
+
+
+
+/* begining of style on contact page  */
+
+.container-contact {
+  max-width: 800px;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 5%;
+  background-color: #007bff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1%;
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-info h2 {
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin-bottom: 5px;
+}
+
+.contact-form h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #7e0f0f;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 150px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #240bae;
+  color: rgb(216, 209, 209);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+button:hover {
+  background-color: #2d0878;
+}
+
+.error {
+  color: rgb(255, 0, 4);
+  font-size: 0.9em;
+
+}
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+  }
+
+
+.slide-margin{
+  margin-bottom: 10% !important;
+}
+
+/* End of style on contact page  */
+
+
+/* starting footer style code from chat GPT (link):https://claude.site/artifacts/8cf2d437-4aa1-4472-8be7-152192ac4392  */
+
+/* Reset and base styles */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+} */
+
+/* Footer Styles */
+.footer {
+  background-color: #0a1d9e;
+  color: #fff;
+  padding: 3rem 1rem;
+  margin-top: 5%;
+
+
+}
+
+.footer-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 2rem;
+}
+
+.footer-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column h3 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 0.5rem;
+}
+
+/* Left Column Styles */
+.footer-about p {
+  margin-bottom: 1rem;
+}
+
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.footer-social a {
+  color: #fff;
+  font-size: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+  color: #007bff;
+}
+
+/* Right Column Styles */
+.footer-contact ul {
+  list-style: none;
+}
+
+.footer-contact li {
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footer-contact i {
+  width: 20px;
+  text-align: center;
+}
+
+.footer-newsletter {
+  margin-top: 1rem;
+}
+
+.footer-newsletter input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border: none;
+}
+
+.footer-newsletter button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background-color: #0056b3;
+}
+
+/* Bottom Footer */
+.footer-bottom {
+  background-color: #1f1061;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+/* End of  footer style code from chat GPT (link):https://claude.site/artifacts/8cf2d437-4aa1-4472-8be7-152192ac4392  */
+
+/* start of styling on sociale media */
+
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+
+.fa-snapchat-ghost {
+  background: #fffc00;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-android {
+  background: #a4c639;
+  color: white;
+}
+
+.fa-dribbble {
+  background: #ea4c89;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-tumblr {
+  background: #2c4762;
+  color: white;
+}
+
+.fa-vine {
+  background: #00b489;
+  color: white;
+}
+
+.fa-foursquare {
+  background: #45bbff;
+  color: white;
+}
+
+.fa-stumbleupon {
+  background: #eb4924;
+  color: white;
+}
+
+.fa-flickr {
+  background: #f40083;
+  color: white;
+}
+
+.fa-yahoo {
+  background: #430297;
+  color: white;
+}
+
+.fa-soundcloud {
+  background: #ff5500;
+  color: white;
+}
+
+.fa-reddit {
+  background: #ff5700;
+  color: white;
+}
+
+.fa-rss {
+  background: #ff6600;
+  color: white;
+}
+
+/* End  of styling on sociale media */
+
+
+
+
+
+
+/* start of styling sponsers page  */
+
+.main-sponser {
+  width: 100%;
+  /* margin: 1rem auto; */
+
+}
+
+article {
+  /* margin-bottom: 1.5rem; */
+  /* padding: 1rem;
+  background: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px; */
+  margin-left: 15%;
+  margin-bottom: 20%;
+  margin-right: 10%;
+}
+
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-left: 15%;
+}
+
+.image-row a {
+  display: block;
+  /* border: 1px solid #ddd; */
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.image-row a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.image-row img {
+  display: block;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+
+
+
+/* End of styling sponsers page  */
+
+
+
+
+/* beginning of 2 column weblog layout */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width:75%;
+  margin-top: 20%;
+  padding: 1rem;
+}
+
+.main-content {
+  margin-bottom: 1rem;
+
+}
+
+.article {
+  background: white;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.article img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.article h2 {
+  margin-top: 0.5rem;
+}
+
+.sidebar {
+  background: white;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.sidebar img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.sidebar .aside-section {
+  margin-bottom: 1rem;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+
+
+
+/* End of 2 column weblog layout */
+
+
+
+
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  .nav-menu { 
+    position: fixed; 
+    left: -100%; 
+    top: 190px; 
+    flex-direction: column; 
+    background-color:white; 
+   opacity: 0.4; 
+    width: 100%; 
+    text-align: center; 
+    transition: 0.3s; 
+    box-shadow: 0 2px 4px rgba(22, 3, 3, 0.1); 
+} 
+
+
+.nav-menu.active { 
+    left: 0; 
+} 
+
+.nav-menu li { 
+    margin: 1rem 0; 
+} 
+
+.hamburger { 
+    display: flex; 
+} 
+
+.hamburger.active .bar:nth-child(1) { 
+    transform: rotate(-45deg) translate(-5px, 6px); 
+} 
+
+.hamburger.active .bar:nth-child(2) { 
+    opacity: 0; 
+} 
+
+.hamburger.active .bar:nth-child(3) { 
+    transform: rotate(45deg) translate(-5px, -6px); 
+}
+
+   }
+
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    gap: 1rem;
+    display: flex;
+  }
+.main-content {
+    flex: 3;
+  }
+
+  .sidebar {
+    flex: 1;
+  }
+  .article img {
+
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-row {
+    justify-content: start;
+  }
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .footer-contact i {
+    margin-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    padding: 40px;
+  }
+      }
+
+      /* Larger screens - 768px and above */
+@media (min-width: 768px) {
+  .column {
+    flex: 1 1 calc(50% - 15px);
+    /* Two columns per row */
+
+  }
+}
+
+/* Larger screens - 1024px and above */
+@media (min-width: 1024px) {
+  .column {
+    flex: 1 1 calc(25% - 15px);
+    /* Four columns per row */
+
+  }
+}
