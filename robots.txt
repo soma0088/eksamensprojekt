@@ -1,0 +1,7 @@
+# this is for search engines and user agents
+User-agents:*
+Allow:/
+Disallow:css
+Disallow:js
+Disallow:images
+Sitemap:ep2.soraj.dk/Sitemap.xml 
